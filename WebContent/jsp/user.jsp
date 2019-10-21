@@ -13,6 +13,13 @@
 	boolean bl = true;
 	out.println(bl);
 %>
+<%!
+// out cannot be resolved.
+//	public void test(){
+//		out.println("hi");
+//	}
+
+%>
 	<br><br>
 	yoyo
 </body>

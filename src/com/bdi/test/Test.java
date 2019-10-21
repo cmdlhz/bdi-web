@@ -42,3 +42,11 @@ public class Test {
 		System.out.println(ph);
 	}
 }
+
+/*
+Phone - generated
+Calling - completed
+Everything is over.
+Phone - ended
+com.bdi.test.Phone@15db9742
+*/
