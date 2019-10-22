@@ -3,6 +3,7 @@ package com.bdi.test.common;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DBCon {
 	private final static String URL;
@@ -35,4 +36,15 @@ public class DBCon {
 		}
 		return con;
 	}
+	
+//	public static void main(String[] args) {
+//		Connection con = getCon();
+//		try {
+//			Statement stmt = con.createStatement();
+//			stmt.executeQuery("select * from movie");
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 }
