@@ -10,14 +10,14 @@ public class Member02 {
 //		map.put("a", "b");
 	}
 	
-	public static void test(Map<String, String> map) {
-		map.put("a", "b");
-		int a = map.size();
-		System.out.println(map);
+	public static void test(Map<String, String> map2) {
+		map2.put("a", "b");
+		int a = map2.size();
+		System.out.println(map2);
 	}
 	
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
-		test(map);
+		test(map); // {a=b}
 	}
 }
