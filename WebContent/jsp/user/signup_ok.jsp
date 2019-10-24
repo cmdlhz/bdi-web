@@ -9,9 +9,9 @@ request.setCharacterEncoding("utf-8");
 String[] hobbies = request.getParameterValues("hobby");
 String hobby = "";
 for(int i=0; i<hobbies.length; i++){
-	hobby += hobbies[i] + ",";
+	hobby += hobbies[i] + ", ";
 }
-hobby = hobby.substring(0, hobby.length()-1);
+hobby = hobby.substring(0, hobby.length()-2);
 out.println(hobby);
 
 String ui_id = request.getParameter("UI_ID");
@@ -34,7 +34,7 @@ ps.setString(6, hobby);
 
 int result = ps.executeUpdate();
 if(result == 1){
-	out.println("Sign up - completed");
+	out.println("<br>Sign up - completed / ");
 	out.println("<a href=\"/bdi-web/jsp/user/user_list.jsp\">리스트 가기</a>");
 	con.commit();
 } else {

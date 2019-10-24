@@ -4,6 +4,17 @@
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%!
+	public String checkStr(String str, String targetStr){
+		String[] strs = str.split(", ");
+		for(String s:strs){
+			if(s.equals(targetStr)){
+				return "checked";
+			}
+		}
+		return "";
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,13 +53,16 @@
 		<td><input type="number" name="UI_AGE" value="<%= rs.getString("UI_AGE")%>"></td>
 		<td><input type="text" name="UI_ETC" value="<%= rs.getString("UI_ETC")%>"></td>
 		<td>
-			<input type="checkbox" name="HOBBY" value="<%= rs.getString("HOBBY")%>">
+			<input type="checkbox" name="HOBBY" value="study" <%= checkStr(rs.getString("HOBBY"), "study")%>>study
+			<input type="checkbox" name="HOBBY" value="game" <%= checkStr(rs.getString("HOBBY"), "game")%>>game
+			<input type="checkbox" name="HOBBY" value="swimming" <%= checkStr(rs.getString("HOBBY"), "swimming")%>>swimming
 		</td>
-		<input type="hidden" name="UI_NUM" value="<%= rs.getString("UI_NUM")%>">
+		<!-- 기준이 되는 UI_NUM 넘겨줌 -->
+		<input type="hidden" name="UI_NUM" value="<%=rs.getString("UI_NUM")%>">
 	</tr>
 <%
 	}
-	
+
 %>
 </table>
 <button>UPDATE</button>
