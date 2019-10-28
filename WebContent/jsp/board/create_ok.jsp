@@ -21,7 +21,7 @@ ps.setString(3, bi_content);
 
 int result = ps.executeUpdate();
 if(result == 1){
-	out.println("<br>Your posting has been registed.");
+	out.println("<br>Your posting has been registered.");
 	out.println("<a href=\"/bdi-web/jsp/board/list.jsp\">Go back to the list</a>");
 	con.commit();
 } else {
