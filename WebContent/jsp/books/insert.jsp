@@ -21,11 +21,11 @@
 %>
 <form method="POST" action="<%=rootPath%>/jsp/books/insert_ok.jsp">
 	제목 : <input type="text" name="BI_TITLE"><br>
-	종류 : <select name="bi_type">
+	종류 : <select name="BI_TYPE">
 <%
 	while(rs.next()){
 %>	
-	<option value="<%= rs.getString("bt_num") %>"><%= rs.getString("bt_name") %></option>
+	<option value="<%= rs.getString("BT_NUM") %>"><%= rs.getString("BT_NAME") %></option>
 <%
 	}
 %>	
